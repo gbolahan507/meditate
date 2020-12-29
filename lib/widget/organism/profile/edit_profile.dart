@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
@@ -13,13 +14,9 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
     var _name = TextEditingController();
-
     var _profession = TextEditingController();
-
     var _place = TextEditingController();
-
     var _age = TextEditingController();
-
   final _formKey = new GlobalKey<FormState>();
 
   @override
@@ -29,48 +26,78 @@ class _EditProfileState extends State<EditProfile> {
       body: Container(
         child: ListView(
           children: [
-            SpecialButtonFilled(
-              text: 'Edit Profile'
-            ),
             SizedBox(height: height * 0.03),
-            CircleAvatar(
-              radius: 50,
-              // child: ,
-              backgroundColor: pink200,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:30),
+              child: Column(
+                children: [
+                  SpecialButtonFilled(
+                    text: 'Edit Profile'
+                  ),
+              
+            SizedBox(height: height * 0.03),
+
+               InkWell(
+                 onTap: (){
+
+                 },
+               child: CircleAvatar(
+                radius: 80,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.camera_alt_rounded, size: 35, color: thickblack,),
+                    Apptext(text: 'Add pic', fontsize: 20, color: thickblack, allignment: Alignment.center,)
+                  ],
+                ),
+                backgroundColor: pink200,
+              ),
             ),
+            // Container()
             SizedBox(height: height * 0.05),
             CustomInput(
               hintext: 'Name',
               controller: _name,
 
             ),
+            SizedBox(height: height * 0.02),
+
                CustomInput(
               hintext: 'Profession',
               controller: _profession,
               
             ),
+            SizedBox(height: height * 0.02),
+
                CustomInput(
               hintext: 'Place',
               controller: _place,
               
             ),
+            SizedBox(height: height * 0.02),
+
                CustomInput(
               hintext: 'Age',
               controller: _age,
               
             ),
+            SizedBox(height: height * 0.07),
+
 
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ChooseButton(
+
+                ChoosedButton(
                   text: 'Cancelled',
                   color: whitecolor,
                   textcolor: teal200,
                 ),
+                SizedBox(width: 15),
 
-                 ChooseButton(
+                 ChoosedButton(
                   text: 'Submit',
                   color: teal200,
                   textcolor: whitecolor,
@@ -81,7 +108,42 @@ class _EditProfileState extends State<EditProfile> {
 
           ],
         ),
-      )
+      ),
+        ],
+              ),
+            ),
+    );
+  }
+}
+
+
+
+class ChoosedButton extends StatelessWidget {
+  const ChoosedButton({
+    Key key, this.text, this.color, this.onTap, this.textcolor,
+  }) : super(key: key);
+  final text;
+  final color;
+  final onTap;
+  final textcolor;
+
+  
+
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+        child: Container(
+          height: 40,
+          width: 120,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: color,
+          border: Border.all(color: teal200, width: 1.5),
+        ),
+        child: Apptext(text: '${text}', allignment: Alignment.center, color: textcolor ?? teal200, fontsize: 20, fontweight: FontWeight.w600,),
+      ),
     );
   }
 }

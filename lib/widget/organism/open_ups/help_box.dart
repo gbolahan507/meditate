@@ -10,12 +10,13 @@ import '../../atom/h1.dart';
 
 class Help_box extends StatelessWidget {
   const Help_box({
-    Key key, this.text, this.image, this.onTap, this.imagewidth,
+    Key key, this.text, this.image, this.onTap, this.imagewidth, this.color,
   }) : super(key: key);
 
   final text;
   final image;
   final onTap;
+  final color;
   final double imagewidth;
 
   @override
@@ -23,12 +24,11 @@ class Help_box extends StatelessWidget {
     return InkWell(
       onTap: onTap,
           child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 15),
-        padding: EdgeInsets.symmetric(vertical:10),
+        padding: EdgeInsets.symmetric(vertical:6),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.blue[100],
+          color: color ?? teal200
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +38,7 @@ class Help_box extends StatelessWidget {
            Apptext(
               allignment: Alignment.centerLeft,
               text: '${text}',
-              color: thickblack,
+              color: whitecolor,
               fontsize: 24,
               fontweight: FontWeight.w600,
             ),

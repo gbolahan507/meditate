@@ -120,6 +120,64 @@ Widget ThoughtInput({
 
 
 
+Widget Listen_now_search({
+  validator,
+  hintext,
+  focusedBorder,
+  fillcolor,
+  enableBorder,
+  onchanged,
+  labelText,
+  filled,
+  suffixIcon,
+  haeding,
+  height,
+  obsecuretext,
+  fontweight,
+  onTapsuffixicon,
+  prefixIcon,
+  labelfontsize,
+  labelweight,
+  
+  TextEditingController controller,
+}) {
+  return Container(
+    child: TextFormField(
+      onChanged: onchanged,
+      controller: controller,
+      textAlign: TextAlign.justify,
+      validator: validator,
+      obscureText: obsecuretext ?? false,
+      decoration: InputDecoration( 
+        labelText: haeding,
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        border: OutlineInputBorder(
+       borderRadius: BorderRadius.circular(10.0),
+       borderSide: BorderSide(color: pink200, width: 1.00),
+     ),
+     contentPadding: EdgeInsets.symmetric(horizontal: 24,),
+     enabledBorder: OutlineInputBorder(
+       borderRadius: BorderRadius.circular(10.0),
+       borderSide: BorderSide(color:pink200 , width: 1.00),
+     ),
+     focusedBorder : OutlineInputBorder(
+       borderRadius: BorderRadius.circular(10.0),
+       borderSide: BorderSide(color: pink200, width: 1.00),
+     ),
+        hintStyle: TextStyle(
+            color:Colors.grey,  fontSize: 16, fontWeight: FontWeight.normal, fontFamily: 'OpenSans' ),
+        fillColor: Colors.white,
+        filled: false,
+  
+        hintText: hintext,
+      ),
+    ),
+  );
+}
+
+
+
 
 
 

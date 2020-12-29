@@ -3,7 +3,7 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
-import 'package:meditaion_app/widget/organism/open_up.dart';
+import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 

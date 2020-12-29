@@ -3,6 +3,8 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/organism/open_ups/help_box.dart';
+import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
+import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 
 
 
@@ -30,33 +32,42 @@ class _Open_upState extends State<Open_up> {
                   Apptext(text: 'Feeling low? We are here to help', fontweight: FontWeight.w700, fontsize: 30, ),
                   SizedBox(height: height * 0.1),
                   Image.asset('images/group.png', ),
+                  SizedBox(height: height * 0.1),
+
                      Help_box(
                   image: 'images/chat.png',
-                  text: 'Chat with us',
+                  text: 'Open Up',
                   imagewidth: 50.0,
                   
                   onTap: (){
-              //  Navigator.push(context, MaterialPageRoute(builder: (context) => Chat_Screen()));
-  
+               Navigator.push(context, MaterialPageRoute(builder: (context) => Open_up_page()));
                   },
                 ),
+                  SizedBox(height: height * 0.02),
 
-                Padding(
-                    padding: const EdgeInsets.only(top: 20, bottom: 20),
-                    child: Apptext(
-                        allignment: Alignment.center,
-                        text: 'or',
-                        color: thickblack,
-                        fontsize: 30,
-                        fontweight: FontWeight.w600,
-                      ),
-                ),
+
+                Apptext(
+                    allignment: Alignment.center,
+                    text: 'or',
+                    color: teal200,
+                    fontsize: 25,
+                    fontweight: FontWeight.w600,
+                  ),
+                  SizedBox(height: height * 0.02),
+
                 Help_box(
                   image: 'images/phone.png',
-                  text: 'Talk to us',
+                  text: 'Listen Now',
                   imagewidth: 50.0,
-                  onTap: (){},
+                  onTap: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context) => Listen_now_screen()));
+
+                    
+                  },
+                  color: pink200,
                 ),
+                  SizedBox(height: height * 0.05),
+
                   
                 ],
               ),

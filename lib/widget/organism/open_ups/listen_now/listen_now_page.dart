@@ -8,7 +8,7 @@ import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
 
-class Open_up_page extends StatelessWidget {
+class Listen_now_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -23,20 +23,30 @@ class Open_up_page extends StatelessWidget {
             child: Column(
               children: [
                 SpecialButtonFilled(
-                  text: 'Open Up',
+                  text: 'Listen Now',
+                  color: pink200,
                 ),
                    SizedBox(height: height * 0.03),
-                    Container( height: 40, child: CustomInput( 
-                    prefixIcon: Icon(Icons.search, color: teal200,)
+                    Container( height: 40, child: Listen_now_search( 
+                    prefixIcon: Icon(Icons.search, color: pink200,)
                   )),
                    SizedBox(height: height * 0.03),
                    Row(
                      children: [
                        Open_up_button(
-                         text: 'Queries',
+                         text: 'New Queries',
+                        //  color: pink200,
+                        
                        ),
                        Open_up_button(
-                         text: 'Conversation',
+                         text: 'Ongoing',
+                        //  color: pink200,
+
+                       ),
+                         Open_up_button(
+                         text: 'Resolved',
+                        //  color: pink200,
+
                        ),
                      ],
                    ),
