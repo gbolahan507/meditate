@@ -40,6 +40,8 @@ class _Open_up_pageState extends State<Open_up_page> {
                    Row(
                      children: [
                        Open_up_button(
+                               color: checked ==  0 ? teal200 : whitecolor,
+                         textcolor: checked ==  0 ? whitecolor : teal200,
                          text: 'Queries',
                          onTap: (){
                            setState(() {
@@ -47,6 +49,7 @@ class _Open_up_pageState extends State<Open_up_page> {
                            });
                          },
                        ),
+                       SizedBox(width: 10,),
                        Open_up_button(
                          color: checked ==  1 ? teal200 : whitecolor,
                          textcolor: checked ==  1 ? whitecolor : teal200,
@@ -107,9 +110,9 @@ class Open_up_button extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: teal200, width: 1.0),
-            color: color ?? teal200
+            color: color
           ),
-          child: Apptext(text: '${text}', color: textcolor ?? whitecolor, allignment: Alignment.center,),
+          child: Apptext(text: '${text}', color: textcolor , allignment: Alignment.center,),
       ),
         ),
     );
