@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/auths/signup_page.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
+import 'package:meditaion_app/screens/navscreen.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
+import 'package:meditaion_app/screens/navscreen.dart';
+
 
 
 
@@ -74,7 +77,10 @@ class Sign_in extends StatelessWidget {
 
              ButtonFilled(
               text: 'Login',
-              action: (){},
+              action: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
+
+              },
               textColor: whitecolor,
             ),
 
@@ -83,7 +89,10 @@ class Sign_in extends StatelessWidget {
 
              ButtonFilled(
               text: 'Anonymous Login',
-              action: (){},
+              action: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
+
+              },
               color: pink300,
               textColor: whitecolor,
             ),

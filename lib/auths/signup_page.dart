@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditaion_app/auths/otp_page.dart';
 
 import '../screens/navscreen.dart';
 import '../util/colors.dart';
@@ -84,11 +85,11 @@ class SignUp_page extends StatelessWidget {
                         ButtonFilled(
                         text: 'Sign up',
                         action: (){
-                          if(_formKey.currentState.validate()){
+                          // if(_formKey.currentState.validate()){
                       
-  Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Otp_verivication()));
 
-                          }
+                          // }
 
                         },
                         color: teal200,

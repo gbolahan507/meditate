@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
+import 'package:meditaion_app/screens/navscreen.dart';
 import 'package:meditaion_app/util/colors.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
@@ -20,6 +21,8 @@ class SelectToic extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 children: [
+                 SizedBox(height: height * 0.03),
+
                   SpecialButtonFilled(
                     text: 'Select Topic'
                   ),
@@ -63,12 +66,18 @@ class SelectToic extends StatelessWidget {
                       child: ButtonFilled(
                         text: ' Continue',
                         // color: whitecolor,
-                        action: (){},
+                        action: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
+
+                        },
                         
 
                       ),
                     ),
-                  )
+                  ),
+
+              SizedBox(height: height * 0.03),
+
 
           ],
         ),
