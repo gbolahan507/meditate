@@ -8,7 +8,14 @@ import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
 
-class Open_up_page extends StatelessWidget {
+class Open_up_page extends StatefulWidget {
+  @override
+  _Open_up_pageState createState() => _Open_up_pageState();
+}
+
+class _Open_up_pageState extends State<Open_up_page> {
+
+  int checked = 0 ;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -34,21 +41,35 @@ class Open_up_page extends StatelessWidget {
                      children: [
                        Open_up_button(
                          text: 'Queries',
+                         onTap: (){
+                           setState(() {
+                             checked = 0;
+                           });
+                         },
                        ),
                        Open_up_button(
+                         color: checked ==  1 ? teal200 : whitecolor,
+                         textcolor: checked ==  1 ? whitecolor : teal200,
+                         onTap: (){
+                           setState(() {
+                             checked = 1;
+                           });
+                         },
                          text: 'Conversation',
                        ),
                      ],
                    ),
                    SizedBox(height: height * 0.05),
 
-                   ListView.builder(
+               checked ==  0 ?     ListView.builder(
                      shrinkWrap: true,
                      physics: NeverScrollableScrollPhysics(),
                      itemCount: 5,
                      itemBuilder: (context, index){
                        return Queries_container();
                      })
+
+                     : Container(),
 
 
                   

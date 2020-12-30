@@ -12,7 +12,7 @@ import 'package:meditaion_app/widget/organism/homepage/homepage_screen.dart';
 import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_upconv.dart';
-import 'package:meditaion_app/widget/organism/open_ups/open_up_screen.dart';
+import 'package:meditaion_app/widget/organism/open_ups/homepage/open_up_screen.dart';
 import 'package:meditaion_app/widget/organism/proffessionals/proffessional_screen.dart';
 import 'package:meditaion_app/widget/organism/profile/other_profile_view/other_profile.dart';
 import 'package:meditaion_app/widget/organism/profile/profile_page.dart';

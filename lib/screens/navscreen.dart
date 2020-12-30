@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditaion_app/util/colors.dart';
 import 'package:meditaion_app/widget/organism/homepage/homepage_screen.dart';
-import 'package:meditaion_app/widget/organism/open_ups/open_up_screen.dart';
+import 'package:meditaion_app/widget/organism/open_ups/homepage/open_up_screen.dart';
 import 'package:meditaion_app/widget/organism/proffessionals/proffessional_screen.dart';
 
 
