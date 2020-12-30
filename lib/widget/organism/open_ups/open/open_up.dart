@@ -68,18 +68,19 @@ class Open_up_page extends StatelessWidget {
 
 class Open_up_button extends StatelessWidget {
   const Open_up_button({
-    Key key, this.text, this.onTap, this.color, 
+    Key key, this.text, this.onTap, this.color, this.textcolor, 
   }) : super(key: key);
 
   final text;
   final onTap;
   final Color color;
+  final textcolor;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: InkWell(
-          onTap: (){},
+          onTap: onTap,
            child: Container(
             height: 40,
           decoration: BoxDecoration(
@@ -87,7 +88,7 @@ class Open_up_button extends StatelessWidget {
             border: Border.all(color: teal200, width: 1.0),
             color: color ?? teal200
           ),
-          child: Apptext(text: '${text}', color: whitecolor, allignment: Alignment.center,),
+          child: Apptext(text: '${text}', color: textcolor ?? whitecolor, allignment: Alignment.center,),
       ),
         ),
     );

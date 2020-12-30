@@ -127,8 +127,6 @@ class ChoosedButton extends StatelessWidget {
   final onTap;
   final textcolor;
 
-  
-
 
   @override
   Widget build(BuildContext context) {

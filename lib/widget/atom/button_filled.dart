@@ -81,7 +81,7 @@ class SpecialButtonFilled extends StatelessWidget {
             children: <Widget>[
               InkWell(
                 onTap: (){
-                  Navigator.of(context);
+                  Navigator.pop(context);
                 },
                 child: Icon(Icons.arrow_back, color: whitecolor,)),
               Text(
@@ -90,7 +90,7 @@ class SpecialButtonFilled extends StatelessWidget {
                 style: TextStyle(
                     color: textColor ?? Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'OpenSans' ),
               ),
-              Popmenu(),
+              Container(height:10, width: 32.0,)
 
             ],
           ),

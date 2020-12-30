@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/util/colors.dart';
 import 'package:meditaion_app/widget/organism/homepage/homepage_screen.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open_up_screen.dart';
+import 'package:meditaion_app/widget/organism/proffessionals/proffessional_screen.dart';
 
 
 
@@ -16,7 +17,7 @@ class _NavScreenState extends State<NavScreen> {
       Scaffold(),
      Open_up(),
        Scaffold(),
-        Scaffold(),
+        Professionals_screen(),
 
 
   
@@ -60,7 +61,7 @@ class _NavScreenState extends State<NavScreen> {
           ),
           BottomNavigationBarItem(
           icon: Icon(Icons.menu),
-           title: _selectedIndex == 4 ? DotContainer() : Text('More',)
+           title: _selectedIndex == 4 ? DotContainer() : Text('Professional',)
 
           ),
         ]

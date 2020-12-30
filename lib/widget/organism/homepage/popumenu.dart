@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/organism/profile/edit_profile.dart';
+import 'package:meditaion_app/widget/organism/settings/settings_page.dart';
 
 
 class Popmenu extends StatelessWidget {
@@ -35,8 +36,14 @@ class Popmenu extends StatelessWidget {
       child:  Apptext(text:"Saved", color: whitecolor,),
     ),
         PopupMenuItem(
+          
       value: 1,
-      child:  Apptext(text:"Settings", color: whitecolor,),
+      child:  InkWell(
+                onTap: (){
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
+
+        },
+        child: Apptext(text:"Settings", color: whitecolor,)),
     ),
         PopupMenuItem(
       value: 1,
