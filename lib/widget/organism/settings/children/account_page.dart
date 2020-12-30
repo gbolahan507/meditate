@@ -3,9 +3,9 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/organism/payment/payment_gateway.dart';
-import 'package:meditaion_app/widget/organism/settings/children/about.dart';
-import 'package:meditaion_app/widget/organism/settings/children/account_page.dart';
-import 'package:meditaion_app/widget/organism/settings/children/help.dart';
+import 'package:meditaion_app/widget/organism/profile/edit_profile.dart';
+import 'package:meditaion_app/widget/organism/settings/children/change_password.dart';
+import 'package:meditaion_app/widget/organism/settings/children/language.dart';
 import 'package:meditaion_app/widget/organism/settings/children/notification_page.dart';
 import 'package:meditaion_app/widget/organism/settings/children/privacy.dart';
 import 'package:meditaion_app/widget/organism/settings/children/security_page.dart';
@@ -13,7 +13,7 @@ import 'package:meditaion_app/widget/organism/settings/children/security_page.da
 
 
 
-class Settings extends StatelessWidget {
+class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -27,13 +27,13 @@ class Settings extends StatelessWidget {
               child: Column(
                 children: [
                   SpecialButtonFilled(
-                    text: 'Settings'
+                    text: 'Account'
                   ),
                    SizedBox(height: height * 0.03),
                    Box_container(
-                     text: 'Notification',
+                     text: 'Referal Link',
                      onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Notification_page()));
+                  //  Navigator.push(context, MaterialPageRoute(builder: (context) => Notification_page()));
 
                      },
                    ),
@@ -47,44 +47,35 @@ class Settings extends StatelessWidget {
                    ),
                      SizedBox(height: height * 0.02),
                    Box_container(
-                     text: 'Security',
+                     text: 'Edit Profile',
                      onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Security_page()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
 
                      },
                    ),
                          SizedBox(height: height * 0.02),
                    Box_container(
-                     text: 'Account',
-                     onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Account()));
-
-                     },
-                   ),
-                         SizedBox(height: height * 0.02),
-                   Box_container(
-                     text: 'Help',
-                     onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Help()));
-
-                       
-                     },
-                   ),
-                         SizedBox(height: height * 0.02),
-                   Box_container(
-                     text: 'About',
-                     onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
-
-                     },
-                   ),
-
-                  SizedBox(height: height * 0.02),
-                   Box_container(
-                     text: 'Emergency',
+                     text: 'Delete Account',
                      onTap: (){},
-                     color: pink200
                    ),
+                         SizedBox(height: height * 0.02),
+                   Box_container(
+                     text: 'Change Password',
+                     onTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Change_password()));
+
+                     },
+                   ),
+                         SizedBox(height: height * 0.02),
+                   Box_container(
+                     text: 'Language',
+                     onTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Language()));
+
+                     },
+                   ),
+
+             
 
                    SizedBox(height: height * 0.15),
 
