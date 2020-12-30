@@ -11,9 +11,10 @@ import 'package:meditaion_app/widget/organism/book_appointment/book_appointment_
 import 'package:meditaion_app/widget/organism/homepage/homepage_screen.dart';
 import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
-import 'package:meditaion_app/widget/organism/open_ups/open/open_upconv.dart';
+import 'package:meditaion_app/widget/organism/open_ups/open/open_up_chat.dart';
 import 'package:meditaion_app/widget/organism/open_ups/homepage/open_up_screen.dart';
 import 'package:meditaion_app/widget/organism/proffessionals/proffessional_screen.dart';
+import 'package:meditaion_app/widget/organism/profile/anonymous_profile.dart';
 import 'package:meditaion_app/widget/organism/profile/other_profile_view/other_profile.dart';
 import 'package:meditaion_app/widget/organism/profile/profile_page.dart';
 import 'package:meditaion_app/widget/organism/settings/children/about.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Settings(),
+      home: OnboardinScreen(),
     );
   }
 }

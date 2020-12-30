@@ -3,6 +3,8 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
+import 'package:meditaion_app/widget/molecule/open_ups/open_upps.dart';
+import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_chatpage.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
@@ -14,11 +16,13 @@ class Listen_now_screen extends StatefulWidget {
 }
 
 class _Listen_now_screenState extends State<Listen_now_screen> {
+
+    int checked = 0;
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
 
-    int checked = 0;
 
     return Scaffold(
       body: ListView(
@@ -50,6 +54,7 @@ class _Listen_now_screenState extends State<Listen_now_screen> {
                          textcolor: checked == 0 ? whitecolor : pink200, 
                         
                          text: 'New Queries',
+                         bordercolor: pink200,
                         //  color: pink200,
                         
                        ),
@@ -63,6 +68,8 @@ class _Listen_now_screenState extends State<Listen_now_screen> {
                          textcolor: checked == 1 ? whitecolor : pink200, 
                         
                          text: 'Ongoing',
+                         bordercolor: pink200,
+
                         //  color: pink200,
 
                        ),
@@ -76,6 +83,8 @@ class _Listen_now_screenState extends State<Listen_now_screen> {
                          textcolor: checked == 2 ? whitecolor : pink200, 
                         
                          text: 'Resolved',
+                         bordercolor: pink200,
+
                         //  color: pink200,
 
                        ),
@@ -88,7 +97,13 @@ class _Listen_now_screenState extends State<Listen_now_screen> {
                      physics: NeverScrollableScrollPhysics(),
                      itemCount: 5,
                      itemBuilder: (context, index){
-                       return Queries_container();
+                       return Queries_container(
+                         onTap: (){
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Listen_now_chatPage()));
+
+                           
+                         },
+                       );
                      }) : (checked == 1 ? Container() :  (Container () ) )
 
 
@@ -105,37 +120,6 @@ class _Listen_now_screenState extends State<Listen_now_screen> {
 
 
 
-
-
-class Open_up_button extends StatelessWidget {
-  const Open_up_button({
-    Key key, this.text, this.onTap, this.color, this.textcolor,
-  }) : super(key: key);
-
-  final text;
-  final onTap;
-  final color;
-  final textcolor;
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-        child: InkWell(
-          onTap: onTap,
-           child: Container(
-            height: 40,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: pink200, width: 1.0),
-            color: color,
-          ),
-          child: Apptext(text: '${text}', color: textcolor, allignment: Alignment.center,),
-      ),
-        ),
-    );
-  }
-}
 
 
 

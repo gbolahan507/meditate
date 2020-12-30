@@ -3,13 +3,15 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
+import 'package:meditaion_app/widget/molecule/open_ups/open_upps.dart';
+import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
 
 
-class Open_up_conv_page extends StatelessWidget {
+class Open_up_chat_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -27,26 +29,12 @@ class Open_up_conv_page extends StatelessWidget {
                   text: 'Open Up',
                 ),
                    SizedBox(height: height * 0.03),
-                    Container( height: 40, child: CustomInput( 
-                    prefixIcon: Icon(Icons.search, color: teal200,)
-                  )),
-                   SizedBox(height: height * 0.03),
-                   Row(
-                     children: [
-                       Open_up_button(
-                         text: 'Queries',
-                       ),
-                       Open_up_button(
-                         text: 'Conversation',
-                       ),
-                     ],
-                   ),
-                   SizedBox(height: height * 0.05),
+                 
 
                     Row(
                       children: [
                         CircleAvatar(
-                        radius: 30,
+                        radius: 20,
                         backgroundImage: AssetImage('images/gbolahan2.png'),
                   ),
                    SizedBox(width: 15),

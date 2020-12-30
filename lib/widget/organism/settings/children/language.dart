@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
+import 'package:meditaion_app/widget/molecule/checkboxx.dart';
 import 'package:meditaion_app/widget/organism/settings/children/privacy.dart';
 
 

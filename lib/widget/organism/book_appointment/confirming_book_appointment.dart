@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
+import 'package:meditaion_app/widget/molecule/appointment/appointment.dart';
 import 'package:meditaion_app/widget/organism/book_appointment/book_appointment_landpage.dart';
 import 'package:meditaion_app/widget/organism/book_appointment/book_appointment_profile_page.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/profile/edit_profile.dart';
+import 'package:meditaion_app/widget/organism/profile/profile_page.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
@@ -33,18 +35,17 @@ class Confirming_book_appointment  extends StatelessWidget {
                   ),
                SizedBox(height: height * 0.01),
 
-                  Row(
+ Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Profile_option(
-                        icon: Icons.group_add_outlined,
-                        onTap: (){},
+                      Follower_option(
+                      text: '410',
                       ),
                       SizedBox(width: 30),
-                      Profile_option(
-                    icon: Icons.chat_bubble_outlined,
-                    onTap: (){},
+                      Follower_option(
+                       text:  5,
+                       color: pink200,
                   ),
               
                     ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/h1.dart';
+import 'package:meditaion_app/widget/molecule/appointment/appointment.dart';
+import 'package:meditaion_app/widget/molecule/profile/follow_button.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/profile/profile_page.dart';
 
@@ -24,9 +26,17 @@ class Other_profie_view extends StatelessWidget {
                   ),
                SizedBox(height: height * 0.1),
 
-                  CircleAvatar(
-                    radius: 60,
-                    backgroundImage:  AssetImage('images/gbolahan2.png'),
+                  Stack(
+                    overflow: Overflow.visible,
+                    children: [
+
+                   
+                      CircleAvatar(
+                        radius: 60,
+                        backgroundImage:  AssetImage('images/gbolahan2.png'),
+                      ),
+                   
+                    ],
                   ),
                   SizedBox(height: height * 0.02),
                   Apptext(text: 'John Shamma', color: thickblack, fontweight: FontWeight.w600, fontsize: 20, allignment: Alignment.center,),
@@ -115,29 +125,3 @@ class Other_profie_view extends StatelessWidget {
   }
 }
 
-
-class Follow_button extends StatelessWidget {
-  const Follow_button({
-    Key key, this.text, this.onTap, this.color, 
-  }) : super(key: key);
-
-  final text;
-  final onTap;
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){},
-       child: Container(
-        height: 40,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: teal200, width: 1.0),
-        color: color ?? teal200
-      ),
-      child: Apptext(text: '${text}', color: whitecolor, allignment: Alignment.center,),
-      ),
-    );
-  }
-}

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
+import 'package:meditaion_app/widget/molecule/appointment/appointment.dart';
+import 'package:meditaion_app/widget/molecule/open_ups/open_upps.dart';
 import 'package:meditaion_app/widget/organism/book_appointment/book_appointment_landpage.dart';
+import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 import 'package:meditaion_app/widget/organism/profile/edit_profile.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
@@ -36,14 +39,13 @@ class Book_appointment_profile_page  extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Profile_option(
-                        icon: Icons.group_add_outlined,
-                        onTap: (){},
+                      Follower_option(
+                      text: '410',
                       ),
                       SizedBox(width: 30),
-                      Profile_option(
-                    icon: Icons.chat_bubble_outlined,
-                    onTap: (){},
+                      Follower_option(
+                       text:  5,
+                       color: pink200,
                   ),
               
                     ],
@@ -139,33 +141,5 @@ class Book_appointment_profile_page  extends StatelessWidget {
 
 
 
-class Profile_option extends StatelessWidget {
-  const Profile_option({
-    Key key, this.icon, this.onTap, this.color, this.height, this.width, this.size,
-  }) : super(key: key);
-
-  final icon;
-  final onTap;
-  final color;
-  final double height;
-  final double width;
-  final double size;
 
 
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-           onTap: onTap,
-          child: Container(
-        height: height ?? 40,
-        width: width ?? 40,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: color ?? teal200,
-        ),
-        child: Icon(icon, size: size ?? 25, color: whitecolor,),
-      ),
-    );
-  }
-}

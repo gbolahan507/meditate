@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
+
+
+
+import 'package:flutter/material.dart';
 import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/molecule/open_ups/open_upps.dart';
 import 'package:meditaion_app/widget/molecule/profile/profile_option.dart';
 import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
-import 'package:meditaion_app/widget/organism/profile/anonymous_profile.dart';
 import 'package:meditaion_app/widget/organism/profile/edit_profile.dart';
-import 'package:meditaion_app/widget/organism/profile/other_profile_view/other_profile.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
-class Profile_page  extends StatefulWidget {
+
+
+
+
+
+
+
+class Anonymous_profile extends StatefulWidget {
   @override
-  _Profile_pageState createState() => _Profile_pageState();
+  _Anonymous_profileState createState() => _Anonymous_profileState();
 }
 
-class _Profile_pageState extends State<Profile_page> {
+class _Anonymous_profileState extends State<Anonymous_profile> {
+
 
   int selected = 0;
   @override
@@ -32,13 +42,13 @@ class _Profile_pageState extends State<Profile_page> {
               child: Column(
                 children: [
                   SpecialButtonFilled(
-                    text: 'My Profile'
+                    text: 'Anonymous'
                   ),
                SizedBox(height: height * 0.05),
 
                   CircleAvatar(
                     radius: 60,
-                    backgroundImage:  AssetImage('images/gbolahan2.png'),
+                    backgroundImage:  AssetImage('images/emoji1.png'),
                   ),
                SizedBox(height: height * 0.01),
 
@@ -70,10 +80,7 @@ class _Profile_pageState extends State<Profile_page> {
                   ),
                   Profile_option(
                     icon: Icons.person_remove,
-                    onTap: (){
-  Navigator.push(context, MaterialPageRoute(builder: (context) => Anonymous_profile()));
-
-                    },
+                    onTap: (){},
                     color: pink200,
                   ),
                     ],
@@ -145,12 +152,7 @@ class _Profile_pageState extends State<Profile_page> {
                      physics: NeverScrollableScrollPhysics(),
                      itemCount: 5,
                      itemBuilder: (context, index){
-                       return Queries_container(
-                         onTap: (){
-  Navigator.push(context, MaterialPageRoute(builder: (context) => Other_profie_view()));
-
-                         }
-                       );
+                       return Queries_container();
                      }) : Container()
 
 

@@ -15,7 +15,7 @@ class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
     HomePageScreen(),
       Scaffold(),
-     Open_up(),
+     OpenHome_page(),
        Scaffold(),
         Professionals_screen(),
 
@@ -51,12 +51,12 @@ class _NavScreenState extends State<NavScreen> {
           title:  _selectedIndex == 1 ? DotContainer() :  Text('Groups',)
           ),
           BottomNavigationBarItem(
-          icon: Icon(Icons.today),
-         title: _selectedIndex == 2 ? DotContainer() :  Text('Therapist',)
+          icon: Icon(Icons.chat_bubble_outline),
+         title: _selectedIndex == 2 ? DotContainer() :  Text('Open Up',)
           ),
           BottomNavigationBarItem(
-          icon: Icon(Icons.chat_bubble_outline),
-           title: _selectedIndex == 3 ? DotContainer() : Text('Help',)
+          icon: Icon(Icons.search),
+           title: _selectedIndex == 3 ? DotContainer() : Text('Explore',)
 
           ),
           BottomNavigationBarItem(

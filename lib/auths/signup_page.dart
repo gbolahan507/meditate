@@ -99,11 +99,9 @@ class SignUp_page extends StatelessWidget {
                    ButtonFilled(
                         text: 'Anonymous Sign Up',
                         action: (){
-                          if(_formKey.currentState.validate()){
                       
   Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
 
-                          }
 
                         },
                         color: pink300,

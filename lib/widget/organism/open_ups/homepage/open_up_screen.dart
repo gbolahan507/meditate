@@ -9,12 +9,15 @@ import 'package:meditaion_app/widget/organism/open_ups/open/open_up.dart';
 
 
 
-class Open_up extends StatefulWidget {
+
+
+class OpenHome_page extends StatefulWidget {
   @override
-  _Open_upState createState() => _Open_upState();
+  _OpenHome_pageState createState() => _OpenHome_pageState();
 }
 
-class _Open_upState extends State<Open_up> {
+class _OpenHome_pageState extends State<OpenHome_page> {
+
   @override
   Widget build(BuildContext context) {
       var height = MediaQuery.of(context).size.height;
@@ -56,7 +59,7 @@ class _Open_upState extends State<Open_up> {
                   SizedBox(height: height * 0.02),
 
                 Help_box(
-                  image: 'images/phone.png',
+                  image: 'images/groupperson.png',
                   text: 'Listen Now',
                   imagewidth: 50.0,
                   onTap: (){

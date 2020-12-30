@@ -3,6 +3,9 @@ import 'package:meditaion_app/export/atom_export.dart';
 import 'package:meditaion_app/export/other_export.dart';
 import 'package:meditaion_app/widget/atom/button_filled.dart';
 import 'package:meditaion_app/widget/atom/custom_input.dart';
+import 'package:meditaion_app/widget/molecule/open_ups/open_upps.dart';
+import 'package:meditaion_app/widget/organism/open_ups/listen_now/listen_now_page.dart';
+import 'package:meditaion_app/widget/organism/open_ups/open/open_up_chat.dart';
 import 'package:meditaion_app/widget/organism/queries_container.dart';
 
 
@@ -69,7 +72,12 @@ class _Open_up_pageState extends State<Open_up_page> {
                      physics: NeverScrollableScrollPhysics(),
                      itemCount: 5,
                      itemBuilder: (context, index){
-                       return Queries_container();
+                       return Queries_container(
+                         onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Open_up_chat_page()));
+
+                         },
+                       );
                      })
 
                      : Container(),
@@ -90,34 +98,6 @@ class _Open_up_pageState extends State<Open_up_page> {
 
 
 
-class Open_up_button extends StatelessWidget {
-  const Open_up_button({
-    Key key, this.text, this.onTap, this.color, this.textcolor, 
-  }) : super(key: key);
-
-  final text;
-  final onTap;
-  final Color color;
-  final textcolor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-        child: InkWell(
-          onTap: onTap,
-           child: Container(
-            height: 40,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: teal200, width: 1.0),
-            color: color
-          ),
-          child: Apptext(text: '${text}', color: textcolor , allignment: Alignment.center,),
-      ),
-        ),
-    );
-  }
-}
 
 
 
