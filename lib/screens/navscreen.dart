@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meditaion_app/util/colors.dart';
+import 'package:meditaion_app/widget/organism/group_screen.dart/group_page.dart';
 import 'package:meditaion_app/widget/organism/homepage/homepage_screen.dart';
 import 'package:meditaion_app/widget/organism/open_ups/homepage/open_up_screen.dart';
 import 'package:meditaion_app/widget/organism/proffessionals/proffessional_screen.dart';
@@ -12,7 +13,7 @@ class NavScreen extends StatefulWidget {
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
     HomePageScreen(),
-    Scaffold(),
+    GroupPage(), // Scaffold(),
     OpenHome_page(),
     Scaffold(),
     Professionals_screen(),

@@ -110,7 +110,7 @@ class _OnboardinScreenState extends State<OnboardinScreen> {
                         child: Container(
                           padding: EdgeInsets.symmetric(horizontal:10, vertical: 4),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(2),
+                            borderRadius: BorderRadius.circular(8),
                             color: pink200,
                           ),
                           
