@@ -9,7 +9,9 @@ class ButtonFilled extends StatelessWidget {
   final color;
   final Color textColor;
 
-  ButtonFilled({Key key, this.action, this.width, this.text, this.color, this.textColor}) : super(key: key);
+  ButtonFilled(
+      {Key key, this.action, this.width, this.text, this.color, this.textColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,26 +24,23 @@ class ButtonFilled extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-                
-            color: color?? teal200,
+            color: color ?? teal200,
           ),
           alignment: Alignment.center,
           child: Text(
             "$text",
             textAlign: TextAlign.center,
             style: TextStyle(
-                color: textColor ?? whitecolor, fontSize: 20, fontWeight: FontWeight.normal, fontFamily: 'OpenSans' ),
+                color: textColor ?? whitecolor,
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+                fontFamily: 'OpenSans'),
           ),
         ),
       ),
     );
   }
 }
-
-
-
-
-
 
 class SpecialButtonFilled extends StatelessWidget {
   final text;
@@ -51,10 +50,15 @@ class SpecialButtonFilled extends StatelessWidget {
   final Color textColor;
   final ontapmore;
 
-
-  
-
-  SpecialButtonFilled({Key key, this.action, this.width, this.text, this.color, this.textColor, this.ontapmore}) : super(key: key);
+  SpecialButtonFilled(
+      {Key key,
+      this.action,
+      this.width,
+      this.text,
+      this.color,
+      this.textColor,
+      this.ontapmore})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,33 +69,39 @@ class SpecialButtonFilled extends StatelessWidget {
         onPressed: action,
         padding: EdgeInsets.all(0.0),
         child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-
+          padding: EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(5.0),
-                topRight: Radius.circular(5.0),
-                bottomRight: Radius.circular(5.0),
-                bottomLeft: Radius.circular(5.0)),
-            color: color?? teal200
-          ),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(5.0),
+                  topRight: Radius.circular(5.0),
+                  bottomRight: Radius.circular(5.0),
+                  bottomLeft: Radius.circular(5.0)),
+              color: color ?? teal200),
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               InkWell(
-                onTap: (){
-                  Navigator.pop(context);
-                },
-                child: Icon(Icons.arrow_back, color: whitecolor,)),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: whitecolor,
+                  )),
               Text(
                 "$text",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: textColor ?? Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'OpenSans' ),
+                    color: textColor ?? Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans'),
               ),
-              Container(height:10, width: 32.0,)
-
+              Container(
+                height: 10,
+                width: 32.0,
+              )
             ],
           ),
         ),
@@ -99,10 +109,6 @@ class SpecialButtonFilled extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 class HomepageButtonFilled extends StatelessWidget {
   final text;
@@ -112,7 +118,15 @@ class HomepageButtonFilled extends StatelessWidget {
   final Color textColor;
   final ontapmore;
 
-  HomepageButtonFilled({Key key, this.action, this.width, this.text, this.color, this.textColor, this.ontapmore}) : super(key: key);
+  HomepageButtonFilled(
+      {Key key,
+      this.action,
+      this.width,
+      this.text,
+      this.color,
+      this.textColor,
+      this.ontapmore})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,16 +137,14 @@ class HomepageButtonFilled extends StatelessWidget {
         onPressed: action,
         padding: EdgeInsets.all(0.0),
         child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-
+          padding: EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(5.0),
-                topRight: Radius.circular(5.0),
-                bottomRight: Radius.circular(5.0),
-                bottomLeft: Radius.circular(5.0)),
-            color: color?? teal200
-          ),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(5.0),
+                  topRight: Radius.circular(5.0),
+                  bottomRight: Radius.circular(5.0),
+                  bottomLeft: Radius.circular(5.0)),
+              color: color ?? teal200),
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,13 +153,21 @@ class HomepageButtonFilled extends StatelessWidget {
                 radius: 25,
                 backgroundImage: AssetImage('images/gbolahan2.png'),
               ),
-             
-              Text(
-                "spaekeasyicon",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: textColor ?? Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'OpenSans' ),
+
+              Expanded(
+                child: Image.asset(
+                  "images/logo.png",
+                  color: whitecolor,
+                  height: 50,
+                ),
               ),
+
+              // Text(
+              //   "spaekeasyicon",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //       color: textColor ?? Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'OpenSans' ),
+              // ),
               Popmenu(),
             ],
           ),
@@ -156,5 +176,3 @@ class HomepageButtonFilled extends StatelessWidget {
     );
   }
 }
-
-
